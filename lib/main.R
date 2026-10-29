@@ -1,11 +1,13 @@
 #!/usr/bin/env Rscript
 
-version <- "1.0.0"
-date <- "2026-07-20"
-
 library(checkmate)
 library(optparse)
 library(glue)
+
+# jarl-ignore-start unused_object: documentation variables
+version <- "1.0.0"
+date <- "2026-07-20"
+# jarl-ignore-end unused_object
 
 source("lib/battle.R")
 source("lib/shiny.R")
@@ -127,11 +129,13 @@ main <- function(cli_args = NULL) {
         )
       }
 
+      # jarl-ignore unused_object: dummy return variable
       winner <- battle(
         characters[[character_1]],
         characters[[character_2]],
         health = health
       )
+      # jarl-ignore unused_object: exit status
       exit_status <- 0
     },
     error = function(cond) {

@@ -21,6 +21,7 @@ export default defineConfig({
      dark: "catppuccin-mocha",
     },
   },
+  lastUpdated: true,
   themeConfig: {
     logo: {
       src: "https://bioart.niaid.nih.gov/api/bioarts/411/files/633468.png",
@@ -53,6 +54,9 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/michabirklbauer/r_template" }],
     search: {
         provider: 'local'
+    },
+    editLink: {
+      pattern: 'https://github.com/michabirklbauer/r_template/edit/master/docs/md/:path'
     },
   },
 })
